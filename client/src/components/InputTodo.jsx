@@ -12,7 +12,8 @@ const InputTodo = () => {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(body)
             });
-            console.log(response)
+            // Refresh Window after adding.
+            window.location = "/";
         } catch (err) {
             console.error(err.message);
         }
@@ -21,7 +22,7 @@ const InputTodo = () => {
         <React.Fragment>
             <h1 className='text-center mt-5'>PERN Todo List</h1>
             <form className='d-flex mt-5' onSubmit={onSubmitForm}>
-                <input type="text" className='form-control' value={description} onChange={(e) => setDescription(e.target.value)} />
+                <input type="text" className='form-control mr-2' value={description} onChange={(e) => setDescription(e.target.value)} />
                 <button className='btn btn-success'>
                     Add
                 </button>

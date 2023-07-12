@@ -81,6 +81,11 @@ app.delete("/todos/:id", async (req, res) => {
 })
 
 app.use((err, req, res, next) => {
+    // res.setHeader('Access-Control-Allow-Origin', '*');
+    // res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    // res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    // res.setHeader('Access-Control-Allow-Credentials', true);
+    // next();
     console.error(err.stack);
     res.status(500).send("Something broke 💩");
 });
