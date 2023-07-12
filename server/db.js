@@ -1,3 +1,10 @@
+/**
+ * TODO_APP-PERN-STACK
+ *
+ * @author   Junaid Khan
+ *
+ */
+
 import pg from "pg";
 import dotenv from "dotenv";
 dotenv.config();
