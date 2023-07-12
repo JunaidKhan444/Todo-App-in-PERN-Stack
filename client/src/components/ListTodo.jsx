@@ -5,8 +5,8 @@
  *
  */
 
-import React from 'react';
-import EditTodo from './EditTodo';
+import React from "react";
+import EditTodo from "./EditTodo";
 
 const ListTodo = () => {
     const [todos, setTodos] = React.useState([]);
@@ -36,8 +36,7 @@ const ListTodo = () => {
     }, []);
     return (
         <React.Fragment>
-            {/* <table className="table table-hover mt-5 text-center"> */}
-            <table className='table table-striped mt-5 text-center'>
+            <table className="table table-striped mt-5 text-center">
                 <thead>
                     <tr>
                         <th>Description</th>
@@ -51,7 +50,7 @@ const ListTodo = () => {
                             <td>{todo.description}</td>
                             <td><EditTodo todo={todo} /></td>
                             <td>
-                                <button className='btn btn-danger' onClick={() => { deleteTodo(todo.todo_id) }}>
+                                <button className="btn btn-danger" onClick={() => { deleteTodo(todo.todo_id) }}>
                                     Delete
                                 </button>
                             </td>
@@ -60,7 +59,7 @@ const ListTodo = () => {
                 </tbody>
             </table>
         </React.Fragment>
-    )
+    );
 }
 
 export default ListTodo;

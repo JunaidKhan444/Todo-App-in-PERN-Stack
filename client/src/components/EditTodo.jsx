@@ -5,7 +5,7 @@
  *
  */
 
-import React from 'react'
+import React from "react";
 
 const EditTodo = ({ todo }) => {
     const [description, setDescription] = React.useState(todo.description);
@@ -43,7 +43,7 @@ const EditTodo = ({ todo }) => {
 
                         {/* Modal body  */}
                         <div className="modal-body">
-                            <input type="text" className='form-control' value={description} onChange={e => setDescription(e.target.value)} />
+                            <input type="text" className="form-control" value={description} onChange={e => setDescription(e.target.value)} />
                         </div>
 
                         {/* Modal footer  */}
@@ -56,7 +56,7 @@ const EditTodo = ({ todo }) => {
                 </div>
             </div>
         </React.Fragment>
-    )
+    );
 }
 
 export default EditTodo;
